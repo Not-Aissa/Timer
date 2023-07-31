@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/timer.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.scss" />
+    <title>Timer</title>
+  </head>
+  <body>
+    <div id="app" class="container">
+      <header>
+        <nav>
+          <div class="front">
+            <p class="title">Timer</p>
+          </div>
+        </nav>
+
+        <section class="timer">
+          <div class="minutes">
+            <p id="minutes_content" class="content"></p>
+          </div>
+
+          <div class="seconds">
+            <p id="seconds_content" class="content"></p>
+          </div>
+
+          <div class="m-seconds">
+            <p id="m_seconds_content" class="content"></p>
+          </div>
+        </section>
+
+        <section class="actions">
+          <button id="start_btn" class="start-btn">Start</button>
+
+          <button id="stop_btn" class="stop-btn">Stop</button>
+
+          <button id="reset_btn" class="reset-btn">Reset</button>
+        </section>
+      </header>
+
+      <footer>
+        <p class="text">
+          Developed with love by
+          <span id="developer" class="developer"></span> Copyright ©
+          <span id="current_year"></span> all rights reserved.
+        </p>
+      </footer>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

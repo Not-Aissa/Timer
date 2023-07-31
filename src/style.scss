@@ -1,0 +1,105 @@
+@import "./styles/base.scss";
+@import "./styles/media.scss";
+
+$radius: 0.25rem;
+$duration: 0.3s;
+
+.container {
+  margin: 0 auto;
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+
+    nav {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+
+      .front {
+        .title {
+          font-size: medium;
+          font-weight: 600;
+        }
+      }
+
+      .back {
+        display: flex;
+        align-items: end;
+        justify-content: end;
+      }
+    }
+
+    .timer {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      background-color: #212021;
+      height: 200px;
+      border-radius: $radius;
+
+      .minutes,
+      .seconds,
+      .m-seconds,
+      .dot {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .content {
+          color: #fff;
+          font-family: monospace;
+          font-size: 50px;
+          font-weight: 500;
+
+          &.active {
+            color: red;
+          }
+        }
+      }
+    }
+
+    .actions {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.5rem;
+
+      button {
+        border: none;
+        outline: none;
+        padding: 0.3rem 0.7rem;
+        border-radius: $radius;
+        background-color: #212021;
+        color: #fff;
+        font-size: small;
+        font-weight: bold;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition-duration: $duration;
+
+        &:active {
+          transform: scale(0.95);
+        }
+      }
+    }
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.3rem 0;
+    background-color: #212021;
+    color: #fff;
+    text-align: center;
+
+    .text {
+      font-size: small;
+      font-weight: 400;
+
+      .developer {
+        font-weight: 700;
+      }
+    }
+  }
+}
